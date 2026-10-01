@@ -1,0 +1,12 @@
+[settings]
+listen_port = 8090
+holdback_chars = 300
+local_url = "http://127.0.0.1:9931"
+local_model = "qwen3-14b-local"
+local_max_tokens = 8192
+local_timeout_s = 600
+log_path = "logs/fallback.jsonl"
+
+[[rules]]
+name = "generic-decline"
+pattern = r"^\s*(I\s+(won\'t|can\'t|cannot|am not able to)|I\'m not able to|I must decline)"
